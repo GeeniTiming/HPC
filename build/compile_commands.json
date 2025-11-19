@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/performency.dir/performency.cpp.o -c /home/dcy/place/HPC/performency.cpp",
+  "file": "/home/dcy/place/HPC/performency.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/memwidth.dir/memwidth.cpp.o -c /home/dcy/place/HPC/memwidth.cpp",
+  "file": "/home/dcy/place/HPC/memwidth.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/multhread_unprotected.dir/multhread_unprotected.cpp.o -c /home/dcy/place/HPC/multhread_unprotected.cpp",
+  "file": "/home/dcy/place/HPC/multhread_unprotected.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/multhread_protected.dir/multhread_protected.cpp.o -c /home/dcy/place/HPC/multhread_protected.cpp",
+  "file": "/home/dcy/place/HPC/multhread_protected.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/ptmatmul.dir/ptmatmul.cpp.o -c /home/dcy/place/HPC/ptmatmul.cpp",
+  "file": "/home/dcy/place/HPC/ptmatmul.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/ompmatmul.dir/ompmatmul.cpp.o -c /home/dcy/place/HPC/ompmatmul.cpp",
+  "file": "/home/dcy/place/HPC/ompmatmul.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/work3.dir/work3.cpp.o -c /home/dcy/place/HPC/work3.cpp",
+  "file": "/home/dcy/place/HPC/work3.cpp"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/bin/g++-12 -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o -c /home/dcy/place/HPC/mpi_matmul.cpp",
+  "file": "/home/dcy/place/HPC/mpi_matmul.cpp"
+}
+]

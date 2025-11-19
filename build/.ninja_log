@@ -1,0 +1,16 @@
+# ninja log v5
+0	718	1760173179133434850	CMakeFiles/ptmatmul.dir/ptmatmul.cpp.o	1639acfbf52caf19
+0	811	1760173179227436282	CMakeFiles/performency.dir/performency.cpp.o	5628ea1625832c75
+0	460	1760173178875430918	CMakeFiles/multhread_unprotected.dir/multhread_unprotected.cpp.o	a72ee4c59ae49ef3
+0	2	0	clean	a31eedcededa8236
+436	477	1760173178892431177	multhread_protected	203e2c57d531f123
+811	846	1760173179261436800	performency	dc8549e345a7cf1f
+699	745	1760173179161435277	ompmatmul	dda9c3f120bffcd1
+0	699	1760173179114434560	CMakeFiles/ompmatmul.dir/ompmatmul.cpp.o	6ca234756d1d861f
+0	414	1760173178830430232	CMakeFiles/memwidth.dir/memwidth.cpp.o	29b9d543be8c44d4
+718	759	1760173179175435490	ptmatmul	7aafeb80262b7737
+280	322	1760173178738428829	work3	340b28b9d5ef4f0e
+414	451	1760173178867430796	memwidth	de81c83577ebf98e
+1	280	1760173178695428174	CMakeFiles/work3.dir/work3.cpp.o	d3d19d7f7569ef87
+0	436	1760173178851430552	CMakeFiles/multhread_protected.dir/multhread_protected.cpp.o	cc1b89a2e1bca647
+460	502	1760173178918431573	multhread_unprotected	6f5eea3b70ae5052
