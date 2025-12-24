@@ -36,7 +36,12 @@
 },
 {
   "directory": "/home/dcy/place/HPC/build",
-  "command": "/usr/bin/g++-12 -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o -c /home/dcy/place/HPC/mpi_matmul.cpp",
-  "file": "/home/dcy/place/HPC/mpi_matmul.cpp"
+  "command": "/usr/bin/gcc-12 -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -mavx2 -mfma -fopenmp -pthread -o CMakeFiles/mpi_matmul.dir/mpi_matmul.c.o -c /home/dcy/place/HPC/mpi_matmul.c",
+  "file": "/home/dcy/place/HPC/mpi_matmul.c"
+},
+{
+  "directory": "/home/dcy/place/HPC/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_86,code=[compute_86,sm_86] -mavx2 -mfma -fopenmp -pthread -x cu -c /home/dcy/place/HPC/gpu.cu -o CMakeFiles/gpu.dir/gpu.cu.o",
+  "file": "/home/dcy/place/HPC/gpu.cu"
 }
 ]

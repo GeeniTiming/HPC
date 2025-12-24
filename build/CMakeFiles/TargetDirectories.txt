@@ -6,5 +6,6 @@
 /home/dcy/place/HPC/build/CMakeFiles/ompmatmul.dir
 /home/dcy/place/HPC/build/CMakeFiles/work3.dir
 /home/dcy/place/HPC/build/CMakeFiles/mpi_matmul.dir
+/home/dcy/place/HPC/build/CMakeFiles/gpu.dir
 /home/dcy/place/HPC/build/CMakeFiles/edit_cache.dir
 /home/dcy/place/HPC/build/CMakeFiles/rebuild_cache.dir

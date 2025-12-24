@@ -1,0 +1,132 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HPC",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "gpu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gpu-Debug-8585950d44fad52b060b.json",
+					"name" : "gpu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "memwidth::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-memwidth-Debug-ef27a11be0a05e712c16.json",
+					"name" : "memwidth",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mpi_matmul::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mpi_matmul-Debug-06d1675bba184b2ed8f6.json",
+					"name" : "mpi_matmul",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multhread_protected::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multhread_protected-Debug-d951f4858a0b18bc3774.json",
+					"name" : "multhread_protected",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multhread_unprotected::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multhread_unprotected-Debug-5aa16b1eb2e4f55b40cd.json",
+					"name" : "multhread_unprotected",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ompmatmul::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ompmatmul-Debug-a8af369e2290656240ed.json",
+					"name" : "ompmatmul",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "performency::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-performency-Debug-290c3f7b6f3686291390.json",
+					"name" : "performency",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ptmatmul::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ptmatmul-Debug-19b58c22e36994e8ef0c.json",
+					"name" : "ptmatmul",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "work3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-work3-Debug-794d051f76e418d5f1b2.json",
+					"name" : "work3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dcy/place/HPC/build",
+		"source" : "/home/dcy/place/HPC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

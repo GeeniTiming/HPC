@@ -268,8 +268,8 @@ build work3: CXX_EXECUTABLE_LINKER__work3_Debug CMakeFiles/work3.dir/work3.cpp.o
 
 build cmake_object_order_depends_target_mpi_matmul: phony || CMakeFiles/mpi_matmul.dir
 
-build CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o: CXX_COMPILER__mpi_matmul_Debug /home/dcy/place/HPC/mpi_matmul.cpp || cmake_object_order_depends_target_mpi_matmul
-  DEP_FILE = CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o.d
+build CMakeFiles/mpi_matmul.dir/mpi_matmul.c.o: C_COMPILER__mpi_matmul_Debug /home/dcy/place/HPC/mpi_matmul.c || cmake_object_order_depends_target_mpi_matmul
+  DEP_FILE = CMakeFiles/mpi_matmul.dir/mpi_matmul.c.o.d
   FLAGS = -g -mavx2 -mfma -fopenmp -pthread
   INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
   OBJECT_DIR = CMakeFiles/mpi_matmul.dir
@@ -283,7 +283,7 @@ build CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o: CXX_COMPILER__mpi_matmul_Debug
 #############################################
 # Link the executable mpi_matmul
 
-build mpi_matmul: CXX_EXECUTABLE_LINKER__mpi_matmul_Debug CMakeFiles/mpi_matmul.dir/mpi_matmul.cpp.o | /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+build mpi_matmul: C_EXECUTABLE_LINKER__mpi_matmul_Debug CMakeFiles/mpi_matmul.dir/mpi_matmul.c.o | /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib  /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so  /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
   OBJECT_DIR = CMakeFiles/mpi_matmul.dir
@@ -291,6 +291,39 @@ build mpi_matmul: CXX_EXECUTABLE_LINKER__mpi_matmul_Debug CMakeFiles/mpi_matmul.
   PRE_LINK = :
   TARGET_FILE = mpi_matmul
   TARGET_PDB = mpi_matmul.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target gpu
+
+
+#############################################
+# Order-only phony target for gpu
+
+build cmake_object_order_depends_target_gpu: phony || CMakeFiles/gpu.dir
+
+build CMakeFiles/gpu.dir/gpu.cu.o: CUDA_COMPILER__gpu_Debug /home/dcy/place/HPC/gpu.cu || cmake_object_order_depends_target_gpu
+  DEP_FILE = CMakeFiles/gpu.dir/gpu.cu.o.d
+  FLAGS = -g --generate-code=arch=compute_86,code=[compute_86,sm_86] -mavx2 -mfma -fopenmp -pthread
+  INCLUDES = -isystem=/usr/local/cuda/include
+  OBJECT_DIR = CMakeFiles/gpu.dir
+  OBJECT_FILE_DIR = CMakeFiles/gpu.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target gpu
+
+
+#############################################
+# Link the executable gpu
+
+build gpu: CUDA_EXECUTABLE_LINKER__gpu_Debug CMakeFiles/gpu.dir/gpu.cu.o | /usr/local/cuda/lib64/libcublas.so /usr/local/cuda/lib64/libcudart.so
+  FLAGS = -g --generate-code=arch=compute_86,code=[compute_86,sm_86]
+  LINK_LIBRARIES = /usr/local/cuda/lib64/libcublas.so  /usr/local/cuda/lib64/libcudart.so  -lcudadevrt  -lcudart_static  -lrt  -lpthread  -ldl
+  OBJECT_DIR = CMakeFiles/gpu.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = gpu
+  TARGET_PDB = gpu.dbg
 
 
 #############################################
@@ -327,7 +360,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/dcy/place/HPC/build
 
-build all: phony performency memwidth multhread_unprotected multhread_protected ptmatmul ompmatmul work3 mpi_matmul
+build all: phony performency memwidth multhread_unprotected multhread_protected ptmatmul ompmatmul work3 mpi_matmul gpu
 
 # =============================================================================
 # Built-in targets
@@ -336,14 +369,14 @@ build all: phony performency memwidth multhread_unprotected multhread_protected 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindMPI.cmake /usr/share/cmake-3.22/Modules/FindMPI/test_mpi.c /usr/share/cmake-3.22/Modules/FindOpenMP.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake CMakeFiles/FindMPI/test_mpi.cpp
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake-3.22/Modules/FindCUDAToolkit.cmake /usr/share/cmake-3.22/Modules/FindMPI.cmake /usr/share/cmake-3.22/Modules/FindMPI/test_mpi.c /usr/share/cmake-3.22/Modules/FindOpenMP.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCUDACompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake CMakeFiles/FindMPI/test_mpi.cpp
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindMPI.cmake /usr/share/cmake-3.22/Modules/FindMPI/test_mpi.c /usr/share/cmake-3.22/Modules/FindOpenMP.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake CMakeFiles/FindMPI/test_mpi.cpp: phony
+build ../CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake-3.22/Modules/FindCUDAToolkit.cmake /usr/share/cmake-3.22/Modules/FindMPI.cmake /usr/share/cmake-3.22/Modules/FindMPI/test_mpi.c /usr/share/cmake-3.22/Modules/FindOpenMP.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCUDACompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake CMakeFiles/FindMPI/test_mpi.cpp: phony
 
 
 #############################################
